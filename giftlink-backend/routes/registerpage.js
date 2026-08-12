@@ -28,6 +28,66 @@ function RegisterPage() {
   } catch (error) {
     console.error("Registration error:", error);
   }
+};const handleRegister = async () => {
+  try {
+    const response = await fetch("http://localhost:5000/register", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        firstName,
+        lastName,
+        email,
+        password
+      })
+    });
+
+    const data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.error("Registration error:", error);
+  }
+};const handleRegister = async () => {
+  try {
+    const response = await fetch("http://localhost:5000/register", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        firstName,
+        lastName,
+        email,
+        password
+      })
+    });
+
+    const data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.error("Registration error:", error);
+  }
+};const handleRegister = async () => {
+  try {
+    const response = await fetch("http://localhost:5000/register", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        firstName,
+        lastName,
+        email,
+        password
+      })
+    });
+
+    const data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.error("Registration error:", error);
+  }
 };
 
 return (
