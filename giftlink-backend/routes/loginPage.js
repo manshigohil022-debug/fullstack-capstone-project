@@ -5,10 +5,26 @@ function LoginPage() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    const handleLogin = async () => {
-        console.log("Inside handleLogin");
-    };
+   const handleLogin = async () => {
+  try {
+    const response = await fetch("http://localhost:5000/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer your-token"
+      },
+      body: JSON.stringify({
+        email,
+        password
+      })
+    });
 
+    const data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.error("Login error:", error);
+  }
+};
     return (
         <div className="container mt-5">
             <div className="row justify-content-center">
